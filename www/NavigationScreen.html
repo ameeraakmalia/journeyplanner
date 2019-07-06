@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/screenLoader.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+  </head>
+
+  <body onload="initializeSelection()">
+    <div id="loader" style="display:none;"></div>
+    <div id="myDiv" style="display: block;">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Journey Planner</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="HomeScreen.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="NavigationScreen.html">Navigation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AttractionScreen.html">Attraction</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="form-group" style="margin-top:20px;">
+          <label for="departure">Departure</label>
+          <select
+            class="custom-select"
+            id="departure"
+            onchange="selectDeparture()"
+          >
+            <option disabled selected value>Select Departure</option>
+          </select>
+        </div>
+      </div>
+      <div class="container">
+        <div class="form-group" style="margin-top:20px;">
+          <label for="arrival">Arrival</label>
+          <select class="custom-select" id="arrival" onchange="selectArrival()">
+            <option disabled selected value>Select Arrival</option>
+          </select>
+        </div>
+      </div>
+      <div class="container">
+        <div style="float: right;margin-right:20px;">
+          <input type="checkbox" id="elevator" onclick="elevatorStatus()" />
+          <label style="font-size: 110%;margin-right: 10px;">Elevator</label>
+          <input type="checkbox" id="escalator" onclick="escalatorStatus()" />
+          <label style="font-size: 110%;">Escalator</label>
+        </div>
+      </div>
+      <br />
+      <div class="container" style="display:inline-block;">
+        <button
+          class="btn btn-primary"
+          style="float: right;width:150px;"
+          onClick="searchResult()"
+        >
+          Search
+        </button>
+      </div>
+      <div class="container" style="display:block;">
+        <div id="tempat-letak-table" class="tableSetup"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/navigation.js"></script>
+  </body>
+</html>

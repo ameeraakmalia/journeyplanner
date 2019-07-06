@@ -1,0 +1,12 @@
+{
+    "name": "com.phonegap.journeyplanner",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "displayName": "Journey Planner",
+    "dependencies": {
+        "cordova-plugin-geolocation": "^4.0.1",
+        "org.apache.cordova.geolocation": "0.3.6"
+    }
+}
